@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import ContactForm from './contactForm'
 
 function App() {
-
+  const [contactForm, setContactForm] = useState([]);
   
   return (
     <div className="App">
@@ -22,6 +22,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <ContactForm form={contactForm} />
     </div>
   );
 }

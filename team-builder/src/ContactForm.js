@@ -24,7 +24,8 @@ const ContactForm = () => {
 
     }
     return (
-        <Container>
+        
+        <div>
             <form onSubmit={handleSubmit}>
                 <label for='name'>Name</label>
                 <input onChange={handleChange} name='name' value={teamMembersList.name}/>
@@ -42,13 +43,13 @@ const ContactForm = () => {
                 <p>{contact.email}</p>
                 <p>{contact.role}</p>
             </div>
-        </Container>
+        </div>
     );
 
 
 }
 
-    const Container = styled.div`
+    // const Container = styled.div`
     //     display: flex;
     //     flex-direction: column;
     //     color: dodgerblue;

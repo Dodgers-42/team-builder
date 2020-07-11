@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import style from 'style-components';
+import styled from 'styled-components';
 
 const ContactForm = () => {
-
     const initialState = {
         name: '',
         phone: '',
@@ -26,7 +25,7 @@ const ContactForm = () => {
     }
     return (
         <Container>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label for='name'>Name</label>
                 <input onChange={handleChange} name='name' value={teamMembersList.name}/>
                 <label for='phone'>Phone</label>
@@ -35,6 +34,7 @@ const ContactForm = () => {
                 <input onChange={handleChange} type='email' value={teamMembersList.email}/>
                 <label for='role'>Role</label>
                 <input onChange={handleChange} type='role' name='role' value={teamMembersList.role}/>
+                <button type='submit' >Submit Form</button>
             </form>
             <div>
                 <h2>{contact.name}</h2>
@@ -45,7 +45,16 @@ const ContactForm = () => {
         </Container>
     );
 
-    
 
 }
+
+    const Container = styled.div`
+    //     display: flex;
+    //     flex-direction: column;
+    //     color: dodgerblue;
+    //     form {
+            
+    //     }
+
+    // `
 export default ContactForm;

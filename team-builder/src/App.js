@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import ContactForm from './contactForm'
+import ContactForm from './ContactForm';
 
 function App() {
-  const [contactForm, setContactForm] = useState([]);
+  // const [contactForm, setContactForm] = useState([]);
   
   return (
     <div className="App">

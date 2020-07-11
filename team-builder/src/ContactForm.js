@@ -12,7 +12,18 @@ const ContactForm = () => {
     }
 
     const [teamMembersList, setTeamMembersList] = useState(initialState);
+    const [contact, setContact] = useState(initialState);
 
+    const handleChange = e => {
+        setTeamMembersList({...teamMembersList, [e.target.name]: e.target.value}); 
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        setContact({...teamMembersList})
+        setTeamMembersList({...teamMembersList})
+
+    }
     return (
         <Container>
             <form>
@@ -25,6 +36,12 @@ const ContactForm = () => {
                 <label for='role'>Role</label>
                 <input onChange={handleChange} type='role' name='role' value={teamMembersList.role}/>
             </form>
+            <div>
+                <h2>{contact.name}</h2>
+                <p>{contact.phone}</p>
+                <p>{contact.email}</p>
+                <p>{contact.role}</p>
+            </div>
         </Container>
     );
 

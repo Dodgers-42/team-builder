@@ -32,7 +32,7 @@ const ContactForm = () => {
                 <label for='phone'>Phone</label>
                 <input onChange={handleChange} type='tel' name='phone' value={teamMembersList.phone}/>
                 <label for='email'>Email</label>
-                <input onChange={handleChange} type='email' value={teamMembersList.email}/>
+                <input onChange={handleChange} type='email' name='email' value={teamMembersList.email}/>
                 <label for='role'>Role</label>
                 <input onChange={handleChange} type='role' name='role' value={teamMembersList.role}/>
                 <button type='submit' >Submit Form</button>
